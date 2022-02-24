@@ -1,4 +1,5 @@
 import LoginButton from './LoginButton';
+import SignupButton from './SignupButton';
 import React from 'react';
 
 const Login = ({ setUserAuth }) => {
@@ -6,8 +7,9 @@ const Login = ({ setUserAuth }) => {
         <div>
             <br></br>
             <br></br>
-            Please login
+            Please login or Sign Up
             <LoginButton setUserAuth={setUserAuth} />
+            <SignupButton setUserAuth={setUserAuth} />
         </div>
     )
 };

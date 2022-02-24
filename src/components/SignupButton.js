@@ -1,13 +1,14 @@
-import { useAuth0 } from '@auth0/auth0-react';
 import React from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 
-
-const LoginButton = ({ setUserAuth }) => {
+const SignupButton = ({ setUserAuth }) => {
     const { user, loginWithRedirect } = useAuth0();
 
     const handleClick = () => {
         setUserAuth(user);
-        loginWithRedirect();
+        loginWithRedirect({
+            screen_hint: 'signup',
+        });
     };
 
     return (
@@ -15,11 +16,11 @@ const LoginButton = ({ setUserAuth }) => {
             <br></br>
             <br></br>
             <button onClick={() => handleClick()} className='btn btn-secondary'>
-                Log In
+                Sign Up
             </button>
         </>
     )
 };
 
 
-export default LoginButton;
+export default SignupButton;

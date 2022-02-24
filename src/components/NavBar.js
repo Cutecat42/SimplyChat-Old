@@ -12,7 +12,7 @@ const NavBar = ({ user }) => {
 
             <Navbar.Collapse id='basic-navbar-nav' className='justify-content-end'>
                 <Nav>
-                    <NavLink to='/login' className='text-decoration-none text-light'>Login</NavLink>
+                    <NavLink to='/login' className='text-decoration-none text-light'>Login/Signup</NavLink>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
