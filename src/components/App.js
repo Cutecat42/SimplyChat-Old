@@ -6,6 +6,7 @@ import Login from './Login';
 import Logout from './Logout';
 import NavBar from './NavBar';
 import Profile from './Profile';
+import ExternalApi from './ExternalApi';
 import { useAuth0 } from '@auth0/auth0-react';
 import React, { useState } from 'react';
 
@@ -33,6 +34,10 @@ function App () {
         }>
         </Route>
         <Route exact path='/About' element={<About />
+        }>
+        </Route>
+        <Route exact path='/ExternalApi' element={
+          !user ? <Navigate to="/Login" /> : <ExternalApi />
         }>
         </Route>
         <Route exact path='/Profile' element={
